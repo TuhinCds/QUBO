@@ -3,27 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QUBO</title>
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsve.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-7.0.0-web/css/all.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
 </head>
 <body>
     <header class="header">
-        <div class="header-left-side-content">
-            <div class="logo"></div>
+        <div class="header-row1">
+            <div class="header-left-side-content">
+            <div class="logo-container">
+                <span class="logo">QUBO</span>
+            </div>
         </div>
         <div class="header-content">
             <nav class="nav-menu-define-1">
                 <ul>
-                    <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-tv"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-blog"></i></a></li>
-                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m380-340 280-180-280-180v360Zm-60 220v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320ZM160-280h640v-480H160v480Zm0 0v-480 480Z"/></svg></a></li>
+                    <li class="active"><button><i class="fa-solid fa-tent"></i></button></li>
+                    <li><button><i class="fa-solid fa-tv"></i></button></li>
+                    <li><button><i class="fa-solid fa-blog"></i></button></li>
+                    <li><button><i class="fa-solid fa-user"></i></button></li>
                 </ul>
             </nav>
+        </div>
+        <div class="header-right-side-content">
+            <nav>
+                <ul>
+                    <li><button class="search-show-outer"><div class="search-show-inner"><i class="fa-solid fa-magnifying-glass"></i> <span>Search..</span></div></button></li>
+                    <li><button><i class="fa-regular fa-pen-to-square"></i></button></li>
+                    <li><button class="User-profile"><img src="/img/image.png" alt=""></button></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+        <div class="header-row2">
+            <div class="header-row2-sideLeft">
+            <nav class="nav-menu-define-2">
+                <ul>
+                    <li class="active"><button><i class="fa-solid fa-tent"></i></button></li>
+                    <li><button><i class="fa-solid fa-tv"></i></button></li>
+                    <li><button><i class="fa-solid fa-blog"></i></button></li>
+                    <li><button><i class="fa-solid fa-user"></i></button></li>
+                </ul>
+            </nav>
+                <button class="jobs-selection">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span id="newJobs">12+</span>
+                </button>
+            </div>
+            <button aria-label="Open menu" class="MenuController" id="MenuControllerId">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
         </div>
     </header>
     <main class="main">

@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 778px) {
     .header-content{
         display: none;
     }
@@ -9,13 +9,202 @@
         display: flex;
         align-items: center;
     }
+    .logo-container {
+        margin-left: 30px;
+    }
+    .main {
+    grid-template-areas: 
+    "asideLeft MainContent asideRight"
+    "asideLeft MainContent asideRight"
+    "asideLeft MainContent asideRight"
+    ;
+    grid-template-columns: 0 1fr 0 !important;
+    grid-template-rows: 1fr  1fr 1fr !important;
+    gap: 0 !important;
+}
+.main {
+    padding-left: 10px !important;
+    padding-right: 0 !important;
+}
+
 }
 @media (max-width: 1024px) {
+    .search-show-inner span {
+    font-size: .6rem;
+    display: none !important;
 
+}
+
+.centerContent {
+    padding: 0 5px;
+    padding-left: 6px;
+}
+.main {
+    display: grid;
+    grid-template-areas: 
+    "asideLeft MainContent asideRight"
+    "asideLeft MainContent asideRight"
+    "asideLeft MainContent asideRight"
+    ;
+    grid-template-columns: 0 1fr 230px;
+    grid-template-rows: 1fr  1fr 1fr;
+    padding-left: 0 !important;
+
+}
+
+.search-show-outer {
+    background: none !important;
+    padding: 0;
+    
+}
+.search-show-inner i {
+    font-size: 1.07rem !important;
+}
 }
 @media (max-width: 500px) {
 
 }
 @media (max-width: 450px) {
 
+}
+@media (max-width: 410px) {
+    .OpenLink {
+        display: none;
+    }
+    .openLinks a {
+        font-size: .67rem !important;
+    }
+    .viewAllBtn {
+    padding: 8px 13px;
+    font-size: .56rem !important;
+}
+    .resourse.more {
+    font-size: .5rem;
+    }
+    .postResourseCollabe .resourse {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: -20px;
+    background: var(--white-100);
+    object-fit: cover;
+    }
+    .InvestedDatetimeShow {
+        font-size: .5rem !important;
+    }
+    .invDollars {
+        font-size: .62rem;
+    }
+    .postTagesRelationInMore p{
+        font-size: .7rem;
+    }
+    .postTitleData {
+        font-size: .76rem;
+    }
+    .postTitleData button {
+        font-size: .67rem !important;
+    }
+    .creatorName {
+        font-size: .7rem;
+    }
+    .postDateTime {
+        font-size: .7rem;
+    }
+    .nav-menu-define-2-m {
+
+    }
+    .nav-menu-define-2-m li button {
+        font-size: .9rem !important;
+    }
+    .jobs-selection {
+        font-size: .7rem !important;
+        
+    }
+    .logo {
+    background: linear-gradient(39deg, rgb(255, 106, 0), rgb(158, 50, 0));
+    font-weight: bold;
+    font-size: 1rem;
+    -webkit-background-clip: text;
+    position: relative;
+    -webkit-text-fill-color: transparent;
+}
+.logo::before {
+    position: absolute;
+    content: "";
+    width: 36px;
+    height: 17.5px;
+    background: rgba(255, 85, 0, 0.234);
+    border-radius: 50px 70px 70px 50px;
+    left: -23px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+
+}
+.logo::after {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: rgb(255, 89, 0);
+    border-radius: 3px;
+    left: -20px;
+    top: 50%;
+    transform: translateY(calc(-50% + .3px));
+    animation: animateLogo  3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+#MenuControllerId {
+    font-size: .8rem ;
+    margin-left: 10px;
+}
+.search-show-inner div{
+    font-size: .3rem !important;
+}   
+.nav-menu-define-2 ul {
+    gap: 5px !important;
+}
+.nav-menu-define-2 ul li button.active::after {
+    width: 80% !important;
+}
+.nav-menu-define-2 ul li button::after {
+    bottom: 0;
+}
+.nav-menu-define-2 ul {
+    padding: 0px 10px;
+}
+.User-profile img{
+    width: 24px !important;
+    height: 24px !important;
+}
+.logo-container {
+    margin-left: 25px;
+}
+.search-show-inner span {
+    font-size: .6rem;
+    display: none !important;
+
+}
+.search-show-inner i {
+    font-size: .6rem;
+}
+.header-right-side-content {
+    margin-right: 10px;
+}
+
+}
+@media (max-width: 1160px) {
+.main {
+    display: grid;
+    grid-template-areas: 
+    "asideLeft MainContent asideRight"
+    "asideLeft MainContent asideRight"
+    "asideLeft MainContent asideRight"
+    ;
+    grid-template-columns: 0 1fr 310px;
+    grid-template-rows: 1fr  1fr 1fr;
+    gap: 3px;
+    padding: 10px;
+    transition: .4s;
+
+}
 }

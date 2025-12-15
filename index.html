@@ -24,20 +24,29 @@
         </div>
         <div class="header-content">
             <nav class="nav-menu-define-1">
-                <ul>
-                    <li class="active"><button><i class="fa-solid fa-tent"></i></button></li>
+                <ul class="nav-menu-define-1-m NavDefClick">
+                    <li><button class="active"><i class="fa-solid fa-tent"></i></button></li>
                     <li><button><i class="fa-solid fa-tv"></i></button></li>
                     <li><button><i class="fa-solid fa-blog"></i></button></li>
                     <li><button><i class="fa-solid fa-user"></i></button></li>
                 </ul>
             </nav>
+            <button class="jobs-selection in-header-content">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span id="newJobs">12+</span>
+                    <span class="Indicator active"></span>
+                </button>
         </div>
         <div class="header-right-side-content">
             <nav>
                 <ul>
                     <li><button class="search-show-outer"><div class="search-show-inner"><i class="fa-solid fa-magnifying-glass"></i> <span>Search..</span></div></button></li>
-                    <li><button><i class="fa-regular fa-pen-to-square"></i></button></li>
-                    <li><button class="User-profile"><img src="/img/image.png" alt=""></button></li>
+                    <li><button class="createNew"><i class="fa-solid fa-plus"></i></button></li>
+                    <li>
+                      <button class="User-profile">
+                          <img src="/img/image.png" alt="">
+                      </button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -45,8 +54,8 @@
         <div class="header-row2">
             <div class="header-row2-sideLeft">
             <nav class="nav-menu-define-2">
-                <ul>
-                    <li class="active"><button><i class="fa-solid fa-tent"></i></button></li>
+                <ul class="nav-menu-define-2-m NavDefClick">
+                    <li><button  class="active"><i class="fa-solid fa-tent"></i></button></li>
                     <li><button><i class="fa-solid fa-tv"></i></button></li>
                     <li><button><i class="fa-solid fa-blog"></i></button></li>
                     <li><button><i class="fa-solid fa-user"></i></button></li>
@@ -55,6 +64,7 @@
                 <button class="jobs-selection">
                     <i class="fa-solid fa-chart-simple"></i>
                     <span id="newJobs">12+</span>
+                    <span class="Indicator active"></span>
                 </button>
             </div>
             <button aria-label="Open menu" class="MenuController" id="MenuControllerId">
@@ -64,9 +74,123 @@
     </header>
     <main class="main">
         <aside class="left-sidebar"></aside>
-        <section class="center">
-            <div class="main-header"></div>
-            <section class="grid-post-container"></section>
+        <section class="centerContent">
+            <div class="main-header">
+              <!-- main header content start -->
+                <div class="leftContent">
+                  <div class="leftContentBtns">
+                    <div class="leftContentBtnsIn">
+                      <button id="forYoubBtn"class="active">For you</button>
+                      <button id="ProjectsBtn">Projects</button>
+                    </div>
+                    <div class="lineHr"></div>
+                  </div>
+                </div>
+                <div class="rightContent">
+                  <button><i class="fa-solid fa-filter"></i></button>
+                  <button class="notifyBtn">
+                    <i class="fa-solid fa-bell"></i>
+                    <span id="notify"></span>
+                  </button>
+                </div>
+              <!-- main header content end -->
+            </div>
+            <section class="grid-post-container">
+              <div class="forYouPostsWraper">
+                <div id="forYouPosts">
+                  <article class="post">
+                    <header class="post-header">
+                      <div class="post-header-row1">
+                        <div class="postCreatorProfileContainer">
+                          <div class="postCreatorProfileLogo">
+                            <div class="postCreatorProfileLogoImg">
+                              <img src="/img/image.png" alt="">
+                            </div>
+                            <button class="FollowBtn"><i class="fa-solid fa-plus"></i></button>
+                          </div>
+                          <div class="createtorId">
+                            <div class="creatorName">
+                              Project of <span class="projectCreatorName">meta</span>
+                            </div>
+                            <div class="isVerify">
+                              <i class="fa-solid fa-certificate"></i>
+                              <i class="fa-solid fa-check"></i>
+                            </div>
+                            <button class="dropDownInCreatorId"><i class="fa-solid fa-angle-down"></i></button>
+                          </div>
+                        </div>
+                        <div class="postDateTime">
+                          <time datetime="2025-05-23" class="postTimes">Publiced on May, 23</time>
+                        </div>
+                      </div>
+                      <div class="post-header-row2">
+                        <div class="postTitle">
+                          <div class="postTitleData">
+                            <p class="titleData">meta new ipsum dolor sit amet consectetur adipisicing elil 
+                              <span class="HashTagesAll">
+                                <span>#new project</span>
+                                <span>#meta projects</span>
+                              </span>
+                              <button>More..</button>
+                            </p>
+                          
+                          </div>
+                          
+                        </div>
+                      </div>
+                      <div class="post-header-row3">
+                        <div class="post-header-row3-left">
+                          <div class="InvestedDollars">
+                            <div class="invDollars">B-$56M</div>
+                            <time class="InvestedDatetimeShow" datetime="2025-08-20">
+                              <i class="fa-regular fa-calendar"></i>
+                              <span class="InvestedDatetimeShowIcon">12.08.2025</span>
+                            </time>
+                          </div>
+                        </div>
+                        <div class="PostResourses">
+                          <div class="postResourseCollabe">
+                            <img class="resourse img" src="img/metaIcon.png" alt="">
+                            <img class="resourse img" src="img/dataIcon.png" alt="">
+                            <img class="resourse img" src="img/sumsung.png" alt="">
+                            <div class="resourse more">
+                              20+
+                            </div>
+                          </div>
+                          <button class="viewAllBtn">View all</button>
+                        </div>
+                      </div>
+                    </header>
+                    <section class="post-body">
+                      <div class="postImage">
+                        <img src="img/project-imgs/project1.png" alt="project1">
+                      </div>
+                    </section>
+                    <footer class="post-footer">
+                      <div class="post-footer-left">
+                        <div class="PostReacts">
+                          <button class="like"><i class="fa-solid fa-heart"></i><span class="likeShow">3k</span></button>
+                          <button><i class="fa-regular fa-comment"></i><span class="likeShow"></span>34</button>
+                          
+                        </div>
+                        <div class="openLinks">
+                          <a href="#"><span class="OpenLink">open</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                      </div>
+                      <div class="post-footer-right">
+                        <div class="post-config">
+                          <button><i class="fa-solid fa-chart-line"></i></button>
+                          <button><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                        </div>
+                      </div>
+                    </footer>
+                  </article>
+                </div>
+              </div>
+              <div class="ProjectsPostsWraper">
+                <div id="ProjectsPosts"></div>
+              </div>
+            </section>
         </section>
         <aside class="right-sidebar">
             <div class="widget"></div>

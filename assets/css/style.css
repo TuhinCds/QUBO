@@ -1,12 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
 :root {
-    --header-height: 75px;
+    --header-height: 65px;
     --header-height-two: 120px;
-    --layout-color: rgb(29, 28, 35);
-    --bg-color: rgb(38, 37, 44);
+    --main-header-height: 40px;
+    --layout-color: rgb(15, 14, 17);
+    --layout-color-dark2: rgb(23, 23, 27);
+    --bg-color: rgb(16, 15, 18);
     --white-100: white;
+    --white-90: rgb(225, 225, 225);
+    --white-80: rgb(209, 209, 209);
+    --white-70: rgb(193, 193, 193);
+    --white-60: rgb(149, 149, 149);
+    --white-50: rgb(125, 125, 125);
+    --white-40: rgb(81, 81, 81);
+    --white-30: rgb(53, 53, 53);
+    --white-20: rgb(36, 36, 36);
+    --white-10: rgb(26, 26, 26);
+    --white-transparent-2: rgba(255, 255, 255, 0.029);
     --white-transparent-5: rgba(255, 255, 255, 0.041);
     --white-transparent-9: rgba(255, 255, 255, 0.089);
+    --white-transparent-20: rgba(255, 255, 255, 0.283);
+    --white-transparent-10: rgba(255, 255, 255, 0.066);
+    --white-transparent-30: rgba(255, 255, 255, 0.527);
     --white-transparent-15: rgba(255, 255, 255, 0.188);
     --white-transparent-70: rgba(255, 255, 255, 0.701);
     --white-transparent-83: rgba(255, 255, 255, 0.856);
@@ -17,8 +32,10 @@
     --black-transparent-60: rgba(0, 0, 0, 0.528);
     --black-transparent-50: rgba(0, 0, 0, 0.352);
     --black-transparent-40: rgba(0, 0, 0, 0.201);
-    
-
+    --black-transparent-30: rgba(0, 0, 0, 0.152);
+    --black-transparent-20: rgba(0, 0, 0, 0.135);
+    --l: rgb(21, 20, 24);
+    --bg: rgb(19, 18, 22);
 }
 
 *,
@@ -27,6 +44,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    scrollbar-width: none;
+    user-select: none;
 }
 body {
     font-family: "DM Sans", sans-serif;

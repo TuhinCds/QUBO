@@ -7,14 +7,15 @@
     background: var(--layout-color);
     flex-direction: column;
 }
+
 .header-content {
     display: flex;
     align-items: center;
 }
 .nav-menu-define-1  {
-    margin-left: 00px;
-    background: var(--white-transparent-5);
+    margin-left: 0px;
     border-radius: 10px;
+    background-color: var(--white-transparent-5);
 }
 .nav-menu-define-1 ul {
     display: flex;
@@ -26,21 +27,26 @@
 .nav-menu-define-1 ul li button{
     font-size: 1.30em;
     text-decoration: none;
-    color: var(--white-100);
+    color: var(--white-transparent-70);
     border: none;
     background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: color .5s;
 }
-
+.nav-menu-define-1 ul li button:hover {
+    color: var(--white-100);
+}
 .header-right-side-content ul {
     height: 100%;
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 15px;
+    gap: 8px;
   
 }
 .header-right-side-content {
-    overflow: hidden;
+    padding: 5px 2px;
 }
 .logo-container {
     margin-left: 40px;
@@ -90,7 +96,7 @@
   }
 }
 .header-right-side-content ul li button {
-    font-size: 1.2rem;
+    font-size: 1.04rem;
     text-decoration: none;
     color: var(--white-100);
     border: none;
@@ -125,12 +131,12 @@
     color: var(--white-transparent-70);
 }
 .search-show-inner i {
-    font-size: .9rem;
+    font-size: .9rem ;
     color: var(--white-transparent-83);
 }
 .User-profile img{
-    width: 30px;
-    height: 30px;
+    width: 27px;
+    height: 27px;
     object-fit: cover;
     border-radius: 10000px;
 }
@@ -138,22 +144,10 @@
     display: flex;
     align-items: center;
 }
-.nav-menu-define-1 ul li.active {
-    position: relative;
-}
-.nav-menu-define-1 ul li.active::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 2px;
-    background: var(--white-transparent-83);
-    border-radius: 10p;
-    left: 0;
-    right: 0;
-    border-radius: 100px;
-    bottom: -23px;
 
-    
+
+.nav-menu-define-1 ul button.active {
+    color: var(--white-100) 
 }
 .header-row1 {
     display: flex;
@@ -164,7 +158,7 @@
 .header-row2 {
     display: flex;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 18px;
     width: 100%;
 }
 .header-row2 {
@@ -174,42 +168,34 @@
 }
 .nav-menu-define-2 {
     margin-left: 0px;
-    background: var(--white-transparent-5);
+    background: var(--white-transparent-2);
     border-radius: 10px;
-    box-shadow: 20px 0px 40px var(--black-transparent-40);
+    
 }
 .nav-menu-define-2 ul {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 38px;
-    padding: 10px 20px;
+    gap: 10px;
+    padding: 0px 20px;
 }
 .nav-menu-define-2 ul li button{
-    font-size: 1.1em;
+    font-size: 1.1rem;
     text-decoration: none;
-    color: var(--white-100);
+    color: var(--white-transparent-30);
     border: none;
     background-color: transparent;
-}
-
-.nav-menu-define-2 ul li.active {
+    cursor: pointer;
+    padding: 10px 8px;
     position: relative;
+    transition: color .5s;
 }
-.nav-menu-define-2 ul li.active::after {
-    position: absolute;
-    content: "";
-    width: calc(100% + 10px);
-    height: 2px;
-    background: var(--white-transparent-83);
-    border-radius: 10px;
-    left: 50%;
-    right: 0;
-    border-radius: 100px;
-    bottom: -19px;
-    transform: translateX(-50%);
+.nav-menu-define-2 ul li button:hover {
+    color: var(--white-100);
+}
 
-    
+.nav-menu-define-2 ul li button.active {
+    color: var(--white-100);
 }
 #MenuControllerId {
     padding: 10px 15px;
@@ -220,12 +206,14 @@
     font-size: 1.05rem;
 }
 .jobs-selection {
-    padding: 12px 15px;
+    padding: 6px 15px;
     border: none;
     border-radius: 10px;
     background: none;
-    color: var(--white-100)
-    
+    color: var(--white-100);
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 .header-row2-sideLeft {
     display: flex;
@@ -237,6 +225,516 @@
 #newJobs {
     margin-left: 2px;
     font-weight: 500;
+    
 }
+.Indicator {
+    width: 6px;
+    height: 6px;
+    background: rgb(51, 193, 0);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    border-radius: 1000px;
+    display: none;
+}
+.Indicator.active {
+    display: block;
+}
+.in-header-content {
+    margin-left: 10px;
+    padding: 12px 15px;
+}
+.header-content {
+    background: var(--white-transparent-2);
+    border-radius: 10px;
+}
+.User-profile img {
+    border: 0px solid var(--white-80) !important;
+    position: relative;
+}
+
+
+ 
+
 /* Header end */
+
+/* Body start */
+.main {
+    display: grid;
+    grid-template-areas: 
+    "asideLeft MainContent asideRight"
+    "asideLeft MainContent asideRight"
+    "asideLeft MainContent asideRight"
+    ;
+    grid-template-columns: 310px 1fr 310px;
+    grid-template-rows: 1fr  1fr 1fr;
+    gap: 7px;
+    padding: 10px;
+    transition: .4s;
+
+}
+.left-sidebar {
+    grid-area: asideLeft;
+    background: var(--layout-color-dark2);
+    border-radius: 4px;
+}
+.centerContent {
+    grid-area: MainContent;
+    border-radius: 4px;
+}
+.right-sidebar {
+    grid-area: asideRight;
+    border-radius: 4px;
+}
+.centerContent {
+    display: grid;
+    grid-template-areas: 
+    "mainHeader mainHeader"
+    "GridPostContainer GridPostContainer"
+    
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--main-header-height) 1fr;
+    padding: 0 50px;
+}
+.main-header {
+    grid-area: mainHeader;
+    background: var(--layout-color-dark2);
+    border-radius: 0px;
+    border-bottom: 1px solid var(--white-transparent-15);
+}
+.grid-post-container {
+    grid-area: GridPostContainer;
+    background: var(--layout-color-dark2);
+    border-radius: 4px;
+}
+.right-sidebar {
+    display: grid;
+    grid-template-areas:
+    'Widget1' 
+    'Widget2'
+    'Widget3'
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr 100px;
+    gap: 7px;
+}
+.widget:nth-child(1) {
+    grid-area: Widget1;
+    background: var(--layout-color-dark2);
+    border-radius: 1px;
+}
+.widget:nth-child(2) {
+    grid-area: Widget2;
+    background: var(--layout-color-dark2);
+    border-radius: 1px;
+}
+.widget:nth-child(3) {
+    grid-area: Widget3;
+    background: var(--layout-color-dark2);
+    border-radius: 1px;
+
+}
+.createNew {
+    transition: background .4s;
+    background: rgba(0, 0, 255, 0) !important;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1000px;
+    cursor: pointer;
+    margin: 0;
+}
+.createNew:hover {
+    background: var(--white-transparent-15) !important;
+}
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.leftContent {
+    margin-left: 20px;
+}
+.leftContentBtns {
+    display: flex;
+    align-items: center;
+}
+.leftContentBtns button {
+    border: none;
+    background: none;
+    color: var(--white-transparent-30);
+    font-size: .9rem;
+    position: relative;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.leftContentBtns button.active {
+    color: var(--white-transparent-83);
+}
+
+.rightContent {
+    margin-right: 6px;
+}
+.rightContent button {
+    padding: 6px 10px;
+    border: none;
+    background: var(--white-transparent-10);
+    color: var(--white-transparent-83);
+    border-radius: 7px;
+    font-size: .97rem;
+}
+.rightContent button:nth-child(2) {
+    padding: 6px 10px;
+    border: none;
+    background: transparent;
+    color: var(--white-transparent-83);
+    border-radius: 7px;
+}
+.notifyBtn {
+    position: relative;
+
+}
+#notify {
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    background: red;
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    border: 2px solid var(--layout-color-dark2);
+}
+.leftContentBtns {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.leftContentBtns button {
+    padding: 5px 3px;
+}
+.lineHr {
+    width: 40px;
+    background: var(--white-80);
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 5px;
+    border-radius: 10px;
+    transition: left .4s;
+}
+.leftContentBtnsIn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.lineHr.RightSide {
+    left: 74px;
+    width: 36px;
+}
+/* Body end */
+
+/* For you Posts start */
+#forYouPosts.hide {
+    
+}
+.postCreatorProfileLogoImg {
+    width: 100%;
+}
+
+.postCreatorProfileLogoImg img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 1000px;
+   
+}
+.post-header-row1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.postCreatorProfileLogo {
+    position: relative;
+}
+#forYouPosts {
+    padding: 10px;
+    margin-top: 20px;
+}
+.post {
+    padding: 10px;
+}
+.FollowBtn {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 1000px;
+    background: var(--white-100);
+    border: 2px solid var(--layout-color-dark2);
+    font-size: .6rem;
+    bottom: 0px;
+    right: -2px;
+}
+.postCreatorProfileContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.createtorId {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-weight: bold;
+}
+.creatorName {
+    color: var(--white-transparent-30);
+    font-size: .88rem;
+}
+.projectCreatorName {
+    color: var(--white-transparent-83);
+    
+}
+.isVerify {
+    color: rgba(52, 123, 255, 0.992);
+    font-size: .8rem;
+}
+.dropDownInCreatorId {
+    background: none;
+    border: none;
+    color: var(--white-transparent-70);
+    margin-left: -5px;
+}
+.postDateTime {
+    color: var(--white-transparent-30);
+    font-size: .88rem;
+}
+.post-header-row2 {
+    margin-top: 4px;
+}
+.postTitleData {
+    color: var(--white-80);
+    font-size: .9rem;
+}
+.postTitleData button {
+    border: none;
+    margin-left: 4px;
+    color: var(--white-80);
+    background: none;
+    font-weight: bold;
+
+}
+.postTagesRelationInMore {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+.postTagesRelationInMore p {
+    background: none;
+    border-radius: 1000px;
+    display: inline-block;
+    color: var(--white-transparent-30);
+    font-size: .9rem;
+    white-space: nowrap;
+}
+.postImage img {
+    width: 100%;
+}
+.postImage {
+    width: 100%;
+}
+.postResourseCollabe {
+    display: flex;
+    align-items: center;
+}
+.postResourseCollabe .resourse {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-left: -20px;
+    background: var(--white-100);
+    object-fit: cover;
+}
+.postResourseCollabe .resourse:first-child {
+  margin-left: 0;
+}
+.postResourseCollabe .resourse:hover {
+  transform: translateY(-2px);
+}
+.resourse.more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .65rem;
+    font-weight: bold;
+}
+.PostResourses {
+    display: flex;
+    align-items: center;
+
+}
+.postResourseCollabe {
+    display: flex;
+    align-items: center;
+}
+.post-header-row3 {
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+.InvestedDollars {
+    background: var(--white-transparent-9);
+    display: inline-flex;
+    align-items: center;
+    border-radius: 1000px;
+    overflow: hidden;
+    padding: 1px;
+}
+.invDollars {
+    padding: 8px 10px;
+    background: var(--layout-color-dark2);
+    color: var(--white-100);
+
+    font-size: .8rem;
+    font-weight: 500;
+    border-radius: 1000px;
+}
+.InvestedDatetimeShow {
+    padding: 7px 7px; 
+    padding-right: 10px;
+    margin-left: 2px;
+    font-size: .8rem;
+    color: var(--white-100);
+}
+.InvestedDatetimeShowIcon {
+
+}
+.postTitle {
+    display: flex;
+}
+.hashTagContainer {
+    display: flex;
+    align-items: center;
+}
+.HashTagesAll {
+    position: relative;
+    margin-left: 1px;
+}
+.viewAllBtn {
+    margin-left: 6px;
+    padding: 9px 13px;
+    border: none;
+    border-radius: 100px;
+    background: var(--white-transparent-15);
+    color: var(--white-100);
+}
+.PostResourses {
+    border-radius: 1000px;
+}
+.PostResourses 
+.postResourseCollabe {
+    padding: 3px 3px;
+}
+.postImage {
+    position: relative;
+}
+.postImage img {
+    border-radius: 15px;
+}
+.InvestedShow {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+}
+.InvestedShow button {
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: none;
+    background: var(--black-transparent-20);
+    color: var(--white-100);
+
+}
+.post-footer {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    margin-top: 0px;
+}
+.post-footer-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.openLinks a {
+    padding: 5px 13px;
+    background: var(--white-transparent-83);
+    text-decoration: none;
+    color: var(--black-100);
+    font-size: .8rem;
+    border-radius: 100px;
+    font-weight: bold;
+}
+.PostReacts button {
+    background: none;
+    color: var(--white-80);
+    padding: 5px 8px;
+    border: none;
+    border-left: 1px solid var(--white-transparent-15);
+    background: transparent;
+    transition: background .4s, border-left .3s, color .4s;
+    cursor: pointer;
+}
+
+.PostReacts button i {
+    margin-right: 6px;
+    font-size: 1.1rem;
+}
+.PostReacts button:hover {
+    background: var(--white-transparent-10) !important;
+    border-left: 1px solid transparent;
+}
+.PostReacts button:first-child {
+    background: none;
+    color: var(--white-80);
+    padding: 5px 8px;
+    border: none;
+    border-right: none;
+    
+}
+.PostReacts button.like {
+    color: red;
+}
+.post-config button {
+    width: 32px;
+    height: 32px;
+    border-radius: 1000px;
+    border: none;
+    background: var(--white-transparent-10);
+    color: var(--white-80);
+}
+.post-config {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.isVerify {
+    position: relative;
+}
+.isVerify .fa-check{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: .4rem;
+    color: var(--white-100);
+}
+    /* For you Posts end */
 

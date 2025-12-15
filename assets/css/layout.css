@@ -3,8 +3,9 @@ body {
     height: 100vh;
     display: grid;
     grid-template-areas: 
-    "header header"
-    "main main"
+    "header"
+    "main"
+    "main"
     ;
     grid-template-columns: 1fr;
     grid-template-rows: var(--header-height) 1fr auto;
